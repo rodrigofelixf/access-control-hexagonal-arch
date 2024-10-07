@@ -5,17 +5,17 @@ public class User {
     private String email;
     private String password;
     private Boolean admin;
-    private Long idPerson;
+    private Person person;
 
     public User() {
     }
 
-    public User(Long id, String email, String password, Boolean admin) {
+    public User(Long id, String email, String password, Boolean admin, Person person) {
         this.id = id;
         this.email = email;
         this.password = password;
         this.admin = admin;
-
+        this.person = person;
     }
 
     public Long getId() {
@@ -50,4 +50,11 @@ public class User {
         this.admin = admin;
     }
 
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
 }

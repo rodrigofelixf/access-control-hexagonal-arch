@@ -16,7 +16,12 @@ public class UserService implements UserServicePort {
 
 
     @Override
-    public User createUser(User user) {
+    public User createUser(User user)  {
+        var existUser = userRepositoryPort.findByEmail(user.getEmail());
+        if (existUser != null ) {
+            throw new RuntimeException("Exist User");
+        }
         return userRepositoryPort.create(user);
     }
+
 }

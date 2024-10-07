@@ -4,18 +4,19 @@ public class Resident {
     private Long id;
     private String document;
     private String address;
-    private String phonoNumber;
-    private Long idPerson;
+    private String phoneNumber;
+    private Person person;
+
 
     public Resident() {
     }
 
-    public Resident(Long id, String document, String address, String phonoNumber, Long idPerson) {
+    public Resident(Long id, String document, String address, String phoneNumber, Person person) {
         this.id = id;
         this.document = document;
         this.address = address;
-        this.phonoNumber = phonoNumber;
-        this.idPerson = idPerson;
+        this.phoneNumber = phoneNumber;
+        this.person = person;
     }
 
     public Long getId() {
@@ -42,19 +43,19 @@ public class Resident {
         this.address = address;
     }
 
-    public String getPhonoNumber() {
-        return phonoNumber;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhonoNumber(String phonoNumber) {
-        this.phonoNumber = phonoNumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public Long getIdPerson() {
-        return idPerson;
+    public Person getPerson() {
+        return person;
     }
 
-    public void setIdPerson(Long idPerson) {
-        this.idPerson = idPerson;
+    public void setPerson(Person person) {
+        this.person = person;
     }
 }

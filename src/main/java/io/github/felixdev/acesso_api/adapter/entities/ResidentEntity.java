@@ -10,14 +10,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "tb_user")
-public class UserEntity {
+@Table(name = "tb_resident")
+public class ResidentEntity {
     @Id
     @GeneratedValue
     private Long id;
-    private String email;
-    private String password;
-    private Boolean admin;
+    private String document;
+    private String address;
+    private String phoneNumber;
     @OneToOne
     @JoinColumn(name = "person_id")
     private PersonEntity personEntity;
