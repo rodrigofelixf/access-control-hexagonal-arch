@@ -4,18 +4,18 @@ public class User {
     private Long id;
     private String email;
     private String password;
-    private Boolean isUserAdmin;
+    private Boolean admin;
     private Long idPerson;
 
     public User() {
     }
 
-    public User(Long id, String email, String password, Boolean isUserAdmin, Long idPerson) {
+    public User(Long id, String email, String password, Boolean admin) {
         this.id = id;
         this.email = email;
         this.password = password;
-        this.isUserAdmin = isUserAdmin;
-        this.idPerson = idPerson;
+        this.admin = admin;
+
     }
 
     public Long getId() {
@@ -42,20 +42,12 @@ public class User {
         this.password = password;
     }
 
-
-    public Boolean getUserAdmin() {
-        return isUserAdmin;
+    public Boolean getAdmin() {
+        return admin;
     }
 
-    public void setUserAdmin(Boolean userAdmin) {
-        isUserAdmin = userAdmin;
+    public void setAdmin(Boolean admin) {
+        this.admin = admin;
     }
 
-    public Long getIdPerson() {
-        return idPerson;
-    }
-
-    public void setIdPerson(Long idPerson) {
-        this.idPerson = idPerson;
-    }
 }
